@@ -9,17 +9,19 @@
 
     {{-- Form::open(['url'=> '/projects/{projects}']) --}}
     {!! Form::open(array('method' => 'POST', 'url' => array('projects', $project->slug))) !!}
+        {!! Form::hidden('ord', (null !== Input::get('ord')) ? Input::get('ord') : 'desc') !!}
+        {!! Form::hidden('col', (null !== Input::get('col')) ? Input::get('col') : 'updated_at') !!}
         <div class="form-group">
-            {!! Form::label('description', 'Description contains:') !!}
-            {!! Form::text('description', null, ['class' => 'form-control']) !!}
+            {!! Form::label('search', 'Description contains:') !!}
+            {!! Form::text('search', null, ['class' => 'form-control']) !!}
         </div>
         <div class="form-group">
             {!! Form::submit('Search', ['class' => 'btn btn-primary']) !!}
         </div>
     {!! Form::close() !!} 
 
-    @if(!empty($input['description'])) 
-        Results matching '{{ $input['description'] }}':
+    @if(!empty($input['search'])) 
+        Results matching '{{ $input['search'] }}':
     @endif
 
             <div class="container-fluid">
@@ -36,7 +38,7 @@
                 
                 @foreach($project->tasks(Input::get("col"),Input::get("ord"))->get() as $task)
                     
-                    @if(empty($input['description']) || strpos(strtoupper($task->description),strtoupper($input['description'])) !== false)
+                    @if(empty($input['search']) || strpos(strtoupper($task->description),strtoupper($input['search'])) !== false)
                     <div class="row" >
                         <div class="col-xs-1">{{ $task->id }} </div>
                         <div class="col-xs-3"><a href="{{ route('projects.tasks.show', [$project->slug, $task->slug]) }}">{{ $task->name }}</a></div>
