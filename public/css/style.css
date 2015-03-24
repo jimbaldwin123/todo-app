@@ -1,0 +1,171 @@
+body {
+    font-size: 14px;
+    background: #f2f4f5;
+}
+
+.background {
+    position: absolute;
+    left: 0;
+    top: -60px;
+    right: 0;
+    bottom: 0;
+    /* background: 50% 50% no-repeat; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.header .background {
+    background-image: url("../img/014-mark-rothko-theredlist.jpg");
+    height: 300px;
+    z-index: -1;
+    border: 1px solid black;
+}
+
+.header-text {
+    color: #fff;
+    padding-top: 90px;
+    padding-left: 10px;
+}
+
+.navbar {
+    border-radius: 0;
+    position: fixed;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 100;
+}
+
+.jumbotron {
+    padding:0 !important;
+    margin:0;
+    color: #777777;
+    background: #F2F4F5;
+}
+
+.jumbotron h1 {
+    color: #fa5950;
+    font-size: 27px;
+}
+
+.section-padding {
+    padding-top: 43px;
+}
+
+.grey {
+    color:#777777;
+}
+
+.showcase-box {
+    height: 200px;
+    padding: 2px;
+}
+
+.showcase-item {
+    color: #777777;
+    padding: 40px;
+    height: 100%;
+    width: 100%;
+}
+
+.bottom-menu {
+    background: #e2e2e2;
+    color: #bcc3ca;
+    padding: 39px 0 42px;
+    margin: 150px 0 0 0;
+}
+.bottom-menu .navbar-brand {
+    font-size: 20px;
+    padding: 0;
+}
+.bottom-menu .title {
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.bottom-menu a {
+    color: inherit;
+}
+.active .bottom-menu a,
+.bottom-menu a:hover,
+.bottom-menu a:focus {
+    color: #e47054;
+    text-decoration: none;
+}
+
+.bottom-menu .bottom-links {
+    font-size: 14px;
+    line-height: 1.286;
+}
+
+.bottom-links{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.bottom-links li {
+    display: block;
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+@media (max-width: 767px) {
+    .jumbotron h1 {
+        font-size:22px;
+    }
+    .header-text {
+        /* color: #fa5950; */
+    }
+
+    .bottom-menu .navbar-brand,
+    .bottom-menu .bottom-links {
+        margin-bottom: 10px;
+    }
+    .bottom-menu .navbar-brand {
+        padding: 15px;
+        float: none;
+    }
+    .bottom-menu .bottom-links li {
+        float: none;
+        margin-bottom: 2px;
+    }
+
+}
+
+@media (max-width: 990px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.text-center{
+    text-align: left;
+}
+.tgrid(
+    border-bottom: 1px solid #888;
+)
+
+
