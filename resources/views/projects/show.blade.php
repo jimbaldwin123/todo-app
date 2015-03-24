@@ -21,7 +21,7 @@
     {!! Form::close() !!} 
 
     @if(!empty($input['search'])) 
-        Results matching '{{ $input['search'] }}':
+        <strong>Results matching '{{ $input['search'] }}':</strong>
     @endif
 
             <div class="container-fluid">
@@ -29,10 +29,10 @@
 <h2></h2>
                 <div class="row">
                 <div class="col-xs-1">&nbsp</div>
-                <div class="col-xs-3"><a href="/{{ Request::path() }}?ord={{ (Input::get('ord') == 'asc') ? 'desc' : 'asc' }}&col=name">Title</a></div>
-                <div class="col-xs-3"><a href="/{{ Request::path() }}?ord={{ (Input::get('ord') == 'asc') ? 'desc' : 'asc' }}&col=description">Body</a></div>
-                <div class="col-xs-2"><a href="/{{ Request::path() }}?ord={{ (Input::get('ord') == 'asc') ? 'desc' : 'asc' }}&col=updated_at">Updated</a></div>
-                <div class="col-xs-1"><a href="/{{ Request::path() }}?ord={{ (Input::get('ord') == 'asc') ? 'desc' : 'asc' }}&col=completed">Finished?</a></div>
+                <div class="col-xs-3"><a href="/{{ Request::path() }}?ord={{ (Input::get('ord') == 'asc') ? 'desc' : 'asc' }}&col=name&search={{ Input::get('search') }}">Title</a></div>
+                <div class="col-xs-3"><a href="/{{ Request::path() }}?ord={{ (Input::get('ord') == 'asc') ? 'desc' : 'asc' }}&col=description&search={{ Input::get('search') }}">Body</a></div>
+                <div class="col-xs-2"><a href="/{{ Request::path() }}?ord={{ (Input::get('ord') == 'asc') ? 'desc' : 'asc' }}&col=updated_at&search={{ Input::get('search') }}">Updated</a></div>
+                <div class="col-xs-1"><a href="/{{ Request::path() }}?ord={{ (Input::get('ord') == 'asc') ? 'desc' : 'asc' }}&col=completed&search={{ Input::get('search') }}">Finished?</a></div>
                 <div class="col-xs-2">&nbsp;</div>
             </div>
                 
