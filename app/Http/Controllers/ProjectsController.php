@@ -17,7 +17,7 @@ class ProjectsController extends Controller {
     
         public function __construct(){
             $this->middleware('auth', ['only' => ['edit','create','store','update','destroy']]);
-	    $this->ord = Input::get("ord");
+		    $this->ord = Input::get("ord");
         }
 
 	protected $rules = [
