@@ -17,7 +17,8 @@ class ProjectsController extends Controller {
     
         public function __construct(){
             $this->middleware('auth', ['only' => ['edit','create','store','update','destroy']]);
-	    $this->ord = Input::get("ord");
+	    	$this->ord = Input::get("ord");
+	        $this->col = Input::get("col");
         }
 
 	protected $rules = [
@@ -34,8 +35,12 @@ class ProjectsController extends Controller {
 	{
 	    // $projects = Project::all();
 
-	    $projects = Project::updatedatOrderby($this->ord)->get();
-            return view('projects.index', compact('projects'));
+		if($this->ord){
+		    $projects = Project::orderBy($this->col,$this->ord)->get();
+		}else{
+			$projects = Project::all();
+		}
+        return view('projects.index', compact('projects'));
 	}
 
 	/**

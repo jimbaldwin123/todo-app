@@ -11,9 +11,9 @@
 
         <div class="row">
             <div class="col-xs-1">ID</div>
-            <div class="col-xs-3">Name</div>
-            <div class="col-xs-2">Slug</div>
-            <div class="col-xs-2">Updated</div>
+            <div class="col-xs-3"><a href="/?ord={{ (Input::get('ord') == 'asc') ? 'desc' : 'asc' }}&col=name">Name</a></div>
+            <div class="col-xs-2"><a href="/?ord={{ (Input::get('ord') == 'asc') ? 'desc' : 'asc' }}&col=slug">Slug</a></div>
+            <div class="col-xs-2"><a href="/?ord={{ (Input::get('ord') == 'asc') ? 'desc' : 'asc' }}&col=updated_at">Updated</a></div>
             <div class="col-xs-2"><span class="pull-right">Tasks</span></div>
             <div class="col-xs-2">&nbsp;</div>
         </div>
