@@ -86,7 +86,11 @@ class ProjectsController extends Controller {
 		// print $input['description']; exit;
 	    }
 	    
-            return view('projects.show', compact('project','input'));
+	    // $tasks = $project->tasks->orderBy('name','desc')->get();
+	    // return view('projects.show', compact('tasks'));
+
+        return view('projects.show', compact('project','input'));
+            
 	}
 
 	/**

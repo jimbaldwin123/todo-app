@@ -37,7 +37,7 @@
             </div>
                 
                 @foreach($project->tasks(Input::get("col"),Input::get("ord"))->get() as $task)
-                    
+
                     @if(empty($input['search']) || strpos(strtoupper($task->description),strtoupper($input['search'])) !== false)
                     <div class="row" >
                         <div class="col-xs-1">{{ $task->id }} </div>
