@@ -9,6 +9,6 @@
         
     <p>{{ $task->description }}</p>
     
-    <p>Completedx: {{ $task->completed ? 'Yes' : 'No'}}</p>
+    <p>Completed: {{ $task->completed ? 'Yes' : 'No'}}</p>
     
 @endsection
