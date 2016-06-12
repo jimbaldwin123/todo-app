@@ -10,6 +10,7 @@ use App\Project;
 use App\Task;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Yajra\Datatables\Datatables;
 
 use Illuminate\Http\Request;
 
@@ -42,7 +43,18 @@ class ProjectsController extends Controller {
 		}
         return view('projects.index', compact('projects'));
 	}
-
+    /**
+     * Process datatables ajax request.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function anyData()
+    {
+        $projects = Project::all();
+        return Datatables::of($projects)
+            ->editColumn('name','<a href="project/{{$id}}" >{{$name}}</a>')
+            ->make(true);
+    }
 	/**
 	 * Show the form for creating a new resource.
 	 *

@@ -80,7 +80,7 @@ return [
 
 	'key' => env('APP_KEY', 'SomeRandomString'),
 
-	'cipher' => MCRYPT_RIJNDAEL_128,
+	'cipher' => 'AES-256-CBC',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -135,6 +135,7 @@ return [
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
+        'Yajra\Datatables\DatatablesServiceProvider',
 
 		/*
 		 * Application Service Providers...
@@ -144,8 +145,7 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
-                
-                'Collective\Html\HtmlServiceProvider',
+		'Collective\Html\HtmlServiceProvider',
 
 	],
 
@@ -196,6 +196,7 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+        'Datatables' => 'Yajra\Datatables\Facades\Datatables',
 
 	],
 

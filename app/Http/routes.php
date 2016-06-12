@@ -32,6 +32,8 @@ Route::resource('projects', 'ProjectsController');
 
 Route::resource('projects.tasks', 'TasksController');
 
+Route::get('datatables/data','ProjectsController@anyData');
+
 Route::bind('tasks', function($value, $route) {
 	return App\Task::whereSlug($value)->first();
 });
