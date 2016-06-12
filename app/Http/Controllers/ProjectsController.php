@@ -65,10 +65,10 @@ class ProjectsController extends Controller {
         public function store(Request $request)
         {
                 $this->validate($request, $this->rules);
-                
+
                 $input = Input::all();
                 Project::create( $input );
-         
+
                 return Redirect::route('projects.index')->with('message', 'Project created');
         }
 
