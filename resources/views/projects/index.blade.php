@@ -42,7 +42,7 @@
         {!! link_to_route('projects.create', 'Create Project') !!}
     </p>
 
-    <div></div>
+    <div>xxxx</div>
 
     <table class="table table-bordered" id="projects-table">
         <thead>
@@ -58,6 +58,7 @@
 
 @push('scripts')
 <script>
+    alert('hi');
     $(function() {
 
         $('#projects-table').DataTable({

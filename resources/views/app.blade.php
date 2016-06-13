@@ -52,7 +52,7 @@
 
 	</nav>
 		
-<section class="header section-padding">
+<vgfgfffffffffffffff class="header section-padding">
     <div class="background">&nbsp;</div>
     <div class="container">
         <div class="header-text">
@@ -60,20 +60,14 @@
 		<p>&nbsp;</p>
         </div>
     </div>
-</section>
+</vgfgfffffffffffffff>
 	
 <div class="container">
     <section class="section-padding">
         <div class="jumbotron text-center">
 		
             <div class="panel panel-default">
-		<!--
-                <div class="panel-heading">
-                    <h1>
-                        <span class="grey">Our</span> To-do List
-                    </h1>
-                </div>
-		-->
+
 		<div class="content">
 			@if (Session::has('message'))
 				<div class="flash alert-info">
