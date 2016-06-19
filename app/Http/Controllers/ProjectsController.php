@@ -51,10 +51,13 @@ class ProjectsController extends Controller {
     public function anyData()
     {
         $projects = Project::all();
-        return Datatables::of($projects)
-            ->editColumn('name','<a href="project/{{$id}}" >{{$name}}</a>')
+        $z =  Datatables::of($projects)
+            ->editColumn('name','<a href="projects/{{$id}}" >{{$name}}</a>')
+            ->addColumn('edit','<a href="projects/{{$slug}}/edit" class="edit">EDIT</a>')
+//            ->addColumn('delete','<a href="project/{{$id}}" class="delete">DELETE</a>')
             ->make(true);
-    }
+        return $z;
+	}
 	/**
 	 * Show the form for creating a new resource.
 	 *
