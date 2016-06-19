@@ -56,6 +56,7 @@
             <th>Id</th>
             <th>Name</th>
             <th>Slug</th>
+            <th>Tasks</th>
             <th>Created At</th>
             <th>Updated At</th>
             <th>Test</th>
@@ -76,6 +77,7 @@
                 { data: 'id', name: 'id' },
                 { data: 'name', name: 'name' },
                 { data: 'slug', name: 'slug' },
+                { data: 'count', name: 'count' },
                 { data: 'created_at', name: 'created_at' },
                 { data: 'updated_at', name: 'updated_at' },
                 { data: 'edit', name: 'edit' }

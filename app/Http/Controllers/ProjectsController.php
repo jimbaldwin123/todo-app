@@ -4,6 +4,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Input;
 use Redirect;
 use App\Project;
@@ -50,9 +51,23 @@ class ProjectsController extends Controller {
      */
     public function anyData()
     {
-        $projects = Project::all();
-        $z =  Datatables::of($projects)
-            ->editColumn('name','<a href="projects/{{$id}}" >{{$name}}</a>')
+
+        // $projects = Project::all();
+        // $projects = Project::with('tasks')->get();
+
+		$projects = Project::join('tasks', 'tasks.project_id', '=', 'projects.id')
+            ->groupBy('projects.id')
+            ->get([
+                'projects.id',
+                'projects.name',
+                'projects.slug',
+                'projects.created_at',
+                'projects.updated_at',
+                DB::raw('count(tasks.id) as count')
+            ]);
+
+        $z = Datatables::of($projects)
+            ->editColumn('name','<a href="projects/{{$slug}}" >{{$name}}</a>')
             ->addColumn('edit','<a href="projects/{{$slug}}/edit" class="edit">EDIT</a>')
 //            ->addColumn('delete','<a href="project/{{$id}}" class="delete">DELETE</a>')
             ->make(true);
