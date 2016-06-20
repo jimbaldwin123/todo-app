@@ -60,6 +60,7 @@
             <th>Created At</th>
             <th>Updated At</th>
             <th>Test</th>
+            {{--<th>Test 2</th>--}}
         </tr>
         </thead>
     </table>
@@ -81,7 +82,7 @@
                 { data: 'created_at', name: 'created_at' },
                 { data: 'updated_at', name: 'updated_at' },
                 { data: 'edit', name: 'edit' }
-//                { data: 'delete', name: 'delete' }
+//                 { data: 'delete', name: 'delete' }
             ]
         });
 
