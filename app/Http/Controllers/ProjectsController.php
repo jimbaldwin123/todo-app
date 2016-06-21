@@ -69,7 +69,7 @@ class ProjectsController extends Controller {
         $z = Datatables::of($projects)
             ->editColumn('name','<a href="projects/{{$slug}}" >{{$name}}</a>')
             ->addColumn('edit','<a href="projects/{{$slug}}/edit" class="edit">EDIT</a>')
-//             ->addColumn('delete','<a href="project/{{$slug}}/delete" class="delete confirm">DELETE</a>')
+             ->addColumn('test','<a href="projects/{{$slug}}/delete" class="delete confirm">DELETE</a>')
             ->make(true);
         return $z;
 	}
@@ -163,8 +163,8 @@ class ProjectsController extends Controller {
 	 */
         public function destroy(Project $project)
         {
-                $project->delete();
-                return Redirect::route('projects.index')->with('message', 'Project deleted.');
+            $project->delete();
+            return Redirect::route('projects.index')->with('message', 'Project deleted.');
         }
 
 }

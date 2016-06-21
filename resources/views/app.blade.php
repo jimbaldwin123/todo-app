@@ -52,7 +52,7 @@
 
 	</nav>
 		
-<vgfgfffffffffffffff class="header section-padding">
+<div class="header section-padding">
     <div class="background">&nbsp;</div>
     <div class="container">
         <div class="header-text">
@@ -60,7 +60,7 @@
 		<p>&nbsp;</p>
         </div>
     </div>
-</vgfgfffffffffffffff>
+</div>
 	
 <div class="container">
     <section class="section-padding">
