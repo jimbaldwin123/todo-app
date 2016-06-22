@@ -68,8 +68,8 @@ class ProjectsController extends Controller {
 
         $z = Datatables::of($projects)
             ->editColumn('name','<a href="projects/{{$slug}}" >{{$name}}</a>')
-            ->addColumn('edit','<a href="projects/{{$slug}}/edit" class="edit">EDIT</a>')
-             ->addColumn('test','<a href="projects/{{$slug}}/delete" class="delete confirm">DELETE</a>')
+            ->addColumn('edit','<a href="projects/{{$slug}}/edit" class="edit btn btn-info">EDIT</a>')
+             ->addColumn('test','<a href="projects/{{$slug}}/delete" class="delete confirm btn btn-info">DELETE</a>')
             ->make(true);
         return $z;
 	}

@@ -2,7 +2,7 @@
 // javascript functions for jimbaldwin.net
 
     $(document).ready(function(){
-            $('.confirm').click(function() {
+            $( ".edit-box" ).on( "click", ".confirm", function( event ) {
                     return window.confirm("Are you sure?");
             });
             

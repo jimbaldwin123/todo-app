@@ -27,7 +27,7 @@
                 <div class="col-xs-2"><span class="pull-right">{{ $project->tasks->count() }}</span></div>
 
                 <div class="col-xs-2">
-                    {!! Form::open(array('class' => 'form-inline', 'method' => 'DELETE', 'route' => array('projects.destroy', $project->slug))) !!}
+                    {!! Form::open(array('class' => 'form-inline edit-box', 'method' => 'DELETE', 'route' => array('projects.destroy', $project->slug))) !!}
                     {!! link_to_route('projects.edit', 'Edit', array($project->slug), array('class' => 'btn btn-info')) !!}
                     {!! Form::submit('Delete', array('class' => 'btn btn-info confirm')) !!}
                     {!! Form::close() !!}
@@ -41,15 +41,15 @@
         {!! link_to_route('projects.create', 'Create Project') !!}
     </p>
 
-    <div>
-        <form method="POST" action="http://todo.jimbaldwin.dev/projects/sdf" accept-charset="UTF-8" class="form-inline"><input name="_method" type="hidden" value="DELETE">
-            <input name="_token" type="hidden" value="sw7yKaETJfAoqmb7VmcCuo9JkFy91ksryXhPbeCr">
-            <a href="http://todo.jimbaldwin.dev/projects/sdf/edit" class="btn btn-info">Edit</a>
-            <input class="btn btn-info confirm" type="submit" value="Delete">
-        </form>
-    </div>
+    {{--<div>--}}
+        {{--<form method="POST" action="http://todo.jimbaldwin.dev/projects/sdf" accept-charset="UTF-8" class="form-inline edit-box"><input name="_method" type="hidden" value="DELETE">--}}
+            {{--<input name="_token" type="hidden" value="sw7yKaETJfAoqmb7VmcCuo9JkFy91ksryXhPbeCr">--}}
+            {{--<a href="http://todo.jimbaldwin.dev/projects/sdf/edit" class="btn btn-info">Edit</a>--}}
+            {{--<input class="btn btn-info confirm" type="submit" value="Delete">--}}
+        {{--</form>--}}
+    {{--</div>--}}
 
-    <table class="table table-bordered" id="projects-table">
+    <table class="table table-bordered edit-box" id="projects-table">
         <thead>
         <tr>
             <th>Id</th>
