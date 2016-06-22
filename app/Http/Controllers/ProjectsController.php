@@ -163,8 +163,23 @@ class ProjectsController extends Controller {
 	 */
         public function destroy(Project $project)
         {
+
+			dd($project);
             $project->delete();
             return Redirect::route('projects.index')->with('message', 'Project deleted.');
         }
+
+	/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param \App\Project $project
+	 * @return Response
+	 */
+	public function destroy_by_slug($slug)
+	{
+		$project = Project::where('slug',$slug);
+		$project->delete();
+		return Redirect::route('projects.index')->with('message', 'Project deleted.');
+	}
 
 }

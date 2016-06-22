@@ -29,7 +29,7 @@ Route::group(array('before' => 'auth'), function()
 */
 Route::resource('/', 'ProjectsController');
 Route::get('/projects/{slug}/edit', 'ProjectsController@edit');
-Route::get('/projects/{slug}/delete', 'ProjectsController@destroy');
+Route::get('/projects/{slug}/delete', 'ProjectsController@destroy_by_slug');
 Route::resource('projects', 'ProjectsController');
 
 Route::resource('projects.tasks', 'TasksController');
