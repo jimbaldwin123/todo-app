@@ -50,8 +50,8 @@
             <th>Tasks</th>
             <th>Created At</th>
             <th>Updated At</th>
-            <th>Test</th>
-            <th>Test 2</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
         </tr>
         </thead>
     </table>

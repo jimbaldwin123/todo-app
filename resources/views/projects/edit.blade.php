@@ -5,7 +5,7 @@
 <div class="container">
         <div class="jumbotron text-center">
         
-            <h1>Edit Project: {{ $project->name }} </h1>
+            <h1>Edit Project c: {{ $project->name }} </h1>
      
             {!! Form::model($project, ['method' => 'PATCH', 'route' => ['projects.update', $project->slug]]) !!}
                 @include('projects/partials/_form', ['submit_text' => 'Save Project'])

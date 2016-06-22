@@ -129,8 +129,9 @@ class ProjectsController extends Controller {
 	 * @param \App\Project $project
 	 * @return Response
 	 */
-	public function edit(Project $project)
+	public function edit($slug)
 	{
+            $project = Project::where('slug',$slug)->first();
             return view('projects.edit', compact('project'));
 	}
 
